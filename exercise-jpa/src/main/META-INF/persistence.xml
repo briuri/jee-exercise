@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="exercise-jpa">
+	    <jta-data-source>java:/ExerciseDB</jta-data-source>
+		<class>buri.exercise.model.User</class>
+		<class>buri.exercise.model.Hobby</class>
+		<class>buri.exercise.model.Phone</class>
+		<class>buri.exercise.model.Role</class>
+		
+		<properties>
+			<property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://exercise-db.cwfeyhddrkjv.us-east-1.rds.amazonaws.com:3306/exercise"/>
+			<property name = "javax.persistence.jdbc.user" value = "exercise"/>
+			<property name = "javax.persistence.jdbc.password" value="insertPasswordHere"/>
+			<property name = "javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name = "hibernate.show_sql" value = "true" />
+		</properties>
+	</persistence-unit>
+</persistence>
